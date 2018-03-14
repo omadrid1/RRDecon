@@ -44,7 +44,7 @@ n = 100000
 ##  bin size
 d = 150
 ## index to the parameter lists defined before to induce a mixing density  
-den = 2
+den = 1
 ## parameters of the mixture of normals mixing density
 mypars = parlist[[den]]
 true_mu = mypars$mu
@@ -56,6 +56,7 @@ We can generate data normal means from the mixing density chosen. We run:
 
 
 ```{r}
+set.seed(950)
 mu = RRDecon::rnormix(n,true_weights,true_mu,true_tau2)
 hist(mu,100,col= "lightblue")
 ```
@@ -70,7 +71,6 @@ hist(y,100,col= "lightblue")
 
 We can obtain one estimated function using L2 regularization by runing
 ```{r,message=FALSE,warning = FALSE}
-set.seed(100)
 library(RRDecon)
 library(glmgen)
 library(genlasso)
