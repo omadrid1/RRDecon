@@ -35,7 +35,7 @@ body {
  L2_deconvolution
  L2_deconvolution_path
  L1_deconvolution_path</code></pre>
-<p>To get help on the input parameters of this functions you can type &quot;??&quot; before the name of the function. Below we provide an example using these functions.</p>
+<p>To get help on the input parameters of this functions you can type &quot;??&quot; before the name of the function. Below we provide an example using some of these functions.</p>
 <p>To construct an example you can first create mixtures of normals. This is given below as parameter lists.</p>
 <pre class="sourceCode r"><code class="sourceCode r">parlist =<span class="st"> </span><span class="kw">list</span>()
 parlist[[<span class="dv">1</span>]] =<span class="st">  </span><span class="kw">list</span>(<span class="dt">weights=</span><span class="kw">c</span>(<span class="fl">0.5</span>,<span class="fl">0.4</span>,.<span class="dv">1</span>), <span class="dt">mu=</span><span class="kw">c</span>(-<span class="fl">1.5</span>,<span class="fl">1.5</span>,<span class="dv">4</span>), <span class="dt">tau2 =</span> <span class="kw">c</span>(<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">2</span>))
@@ -73,7 +73,7 @@ y =<span class="st"> </span>mu +<span class="st"> </span><span class="kw">rnorm<
 ## computing estimnate
 <span class="kw">system.time</span>({temp =<span class="st"> </span>RRDecon::<span class="kw">L2_deconvolution</span>(y,<span class="dt">prop =</span> <span class="fl">0.25</span>, <span class="dt">d=</span> <span class="dv">150</span>)})</code></pre>
 <pre><code>##    user  system elapsed 
-##    7.13    0.01    7.22</code></pre>
+##    9.47    0.00   10.13</code></pre>
 <pre class="sourceCode r"><code class="sourceCode r">##  locations at which mixing density is estimated
 loc =<span class="st">  </span>temp$loc
 ## estimated mixing density

@@ -19,7 +19,7 @@ This an R package based on the methods from the paper "A deconvolution path for 
  L2_deconvolution_path
  L1_deconvolution_path
 ```
-To get help on the input parameters of this functions you can type  "??" before the name of the function. Below we provide an example using these functions.
+To get help on the input parameters of this functions you can type  "??" before the name of the function. Below we provide an example using some of these functions.
 
 
 To construct an example  you  can first create  mixtures of normals. This is given  below as parameter lists.

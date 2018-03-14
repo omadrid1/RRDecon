@@ -18,7 +18,7 @@ This an R package based on the methods from the paper "A deconvolution path for 
  L1_deconvolution_path
 ```
 
-To get help on the input parameters of this functions you can type "??" before the name of the function. Below we provide an example using these functions.
+To get help on the input parameters of this functions you can type "??" before the name of the function. Below we provide an example using some of these functions.
 
 To construct an example you can first create mixtures of normals. This is given below as parameter lists.
 
@@ -79,7 +79,7 @@ system.time({temp = RRDecon::L2_deconvolution(y,prop = 0.25, d= 150)})
 ```
 
     ##    user  system elapsed 
-    ##    7.13    0.01    7.22
+    ##    9.47    0.00   10.13
 
 ``` r
 ##  locations at which mixing density is estimated
