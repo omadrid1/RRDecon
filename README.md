@@ -79,7 +79,7 @@ system.time({temp = RRDecon::L2_deconvolution(y,prop = 0.25, d= 150)})
 ```
 
     ##    user  system elapsed 
-    ##    7.55    0.00    7.72
+    ##    7.13    0.01    7.22
 
 ``` r
 ##  locations at which mixing density is estimated
@@ -98,7 +98,7 @@ mean((f_true -  f_hat)^2)
 ## Plot of the estimated mixing density
 delta = loc[2] - loc[1]
 mid_points = c(loc-delta/2,loc[length(loc)]+delta/2)
-hist(mu,breaks =mid_points,col= "lightblue",prob=TRUE,main="Latent normal means and estimated mixing density")
+hist(mu,breaks =mid_points,col= "lightblue",prob=TRUE)
 lines(loc,f_hat, col='red', lwd=2)
 ```
 
